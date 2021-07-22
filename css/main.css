@@ -97,43 +97,93 @@ textarea {
 
 
 html {
-  background-color: black;
+  background-color: #154c79;
   height: 100%;
+    width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0em 2em;
   font-size: 1.25em;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+    font-family: 'Courgette', cursive;
+    font-size: 1.25em;
 }
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;
+    max-width: 1200px;
 }
 
-.div-1, .div-2, .div-3 {
+header,
+footer {
+    background-color: #1e81b0;
+    width: 100%;
+    color: #eeeee4;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background-color: azure;
+    display: flex;
+    width: 100%;
+    padding: 0 1em 0 1em;
+    justify-content: center;
+}
+
+
+.flex-items {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  display: flex;
-    color: #fff;
-  line-height: 1.5em;
-  font-size: .95em;
-  background-color: black;
-  height: 300px;
-    width: 30%;
+    display: flex;
+    color: #eeeee4;
+    line-height: 1.5em;
+    font-size: .95em;
+    background-color: 154c79;
     justify-content: center;
     align-items: center;
-    padding: 0 1em 0 1em;
-
 }
 
-.div-1, .div-2 {
-    border-right: 1px solid #fff;
+#div-2 {
+    border-top: 1px solid #1e81b0;
+    border-bottom: 1px solid #1e81b0;
 }
+
+
+@media all and (max-width: 768px) {
+    body {
+      padding: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .flex-items {
+      flex-basis: 30%;
+      border-bottom: none;
+    }
+
+    #div-1 {
+        padding: 0 1em;
+    }
+        
+    #div-2 p {
+      border-left: 1px solid #1e81b0;
+      border-right: 1px solid #1e81b0;
+      padding: 0 40px;
+    }
+}
+
+
+
+
 
 
 /* ==========================================================================
